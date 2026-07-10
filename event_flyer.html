@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Event Flyer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    display: flex;
+    justify-content: center;
+    background: #cfd8d3;
+    padding: 40px 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .poster {
+    position: relative;
+    width: 1054px;
+    height: 1492px;
+    background: #EDEBF9; /* soft lavender base, matches photo's edges */
+    overflow: hidden;
+  }
+
+  .blob {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('flyer-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 70px 68px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #3A2E45;
+    font-weight: 500;
+  }
+
+  .title {
+    margin-top: 170px;
+    font-size: 76px;
+    line-height: 1.02;
+    font-weight: 600;
+    color: #2C2237;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    margin-top: 26px;
+    font-size: 21px;
+    line-height: 1.5;
+    color: #3F3350;
+    font-weight: 400;
+    max-width: 420px;
+  }
+
+  .details {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+  }
+
+  .detail-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .icon {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    color: #2C2237;
+  }
+
+  .detail-label {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #2C2237;
+  }
+
+  .detail-value {
+    margin-top: 4px;
+    font-size: 17px;
+    color: #3F3350;
+    font-weight: 300;
+  }
+
+  .description {
+    position: absolute;
+    right: 68px;
+    bottom: 260px;
+    width: 300px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #3F3350;
+    font-weight: 300;
+    text-align: left;
+  }
+
+  .divider {
+    position: absolute;
+    left: 68px;
+    right: 68px;
+    bottom: 150px;
+    border-top: 1px solid #B9AECF;
+  }
+
+  .footer {
+    position: absolute;
+    left: 68px;
+    right: 68px;
+    bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .register-label {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #2C2237;
+  }
+
+  .register-url {
+    margin-top: 6px;
+    font-size: 15px;
+    color: #3F3350;
+    font-weight: 300;
+  }
+
+  .socials {
+    text-align: right;
+  }
+
+  .socials-label {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #2C2237;
+    margin-bottom: 10px;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+  }
+
+  .social-icons span {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #3A2E45;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2C2237;
+  }
+</style>
+</head>
+<body>
+
+<div class="poster">
+  <div class="blob"></div>
+
+  <div class="content">
+    <div class="top-row">
+      <span>YOUR ORGANIZATION</span>
+      <span>YOU'RE INVITED</span>
+    </div>
+
+    <div class="title">YOUR EVENT<br>TITLE HERE</div>
+
+    <div class="subtitle">A short and inspiring subtitle<br>can go right here</div>
+
+    <div class="details">
+      <div class="detail-row">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="5" width="18" height="16" rx="2"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+          <line x1="7" y1="3" x2="7" y2="7"/>
+          <line x1="17" y1="3" x2="17" y2="7"/>
+        </svg>
+        <div>
+          <div class="detail-label">DATE</div>
+          <div class="detail-value">May 20, 20XX</div>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="9"/>
+          <polyline points="12 7 12 12 15 14"/>
+        </svg>
+        <div>
+          <div class="detail-label">TIME</div>
+          <div class="detail-value">02:00 PM &ndash; 04:00 PM</div>
+        </div>
+      </div>
+
+      <div class="detail-row">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21z"/>
+          <circle cx="12" cy="9.5" r="2.3"/>
+        </svg>
+        <div>
+          <div class="detail-label">LOCATION</div>
+          <div class="detail-value">Your Location Here<br>City, State</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      Add a short description of your event here. Highlight what attendees can expect and why they should join.
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="footer">
+      <div>
+        <div class="register-label">REGISTER NOW</div>
+        <div class="register-url">www.yourwebsite.com</div>
+      </div>
+      <div class="socials">
+        <div class="socials-label">FOLLOW US</div>
+        <div class="social-icons">
+          <span>&#9679;</span>
+          <span>in</span>
+          <span>&#x1F426;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
